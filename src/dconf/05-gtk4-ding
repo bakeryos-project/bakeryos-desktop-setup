@@ -1,0 +1,9 @@
+[org/gnome/shell/extensions/gtk4-ding]
+add-volumes-opposite=true
+icon-size='tiny'
+show-desktop-widgets=true
+show-drop-place=true
+show-home=true
+show-second-monitor=false
+show-trash=true
+show-volumes=false

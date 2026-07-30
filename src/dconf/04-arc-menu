@@ -1,0 +1,20 @@
+[org/gnome/shell/extensions/arcmenu]
+activate-on-hover=true
+arcmenu-hotkey=@as []
+arcmenu-hotkey-overlay-key-enabled=true
+context-menu-items=[{'id': 'org.gnome.Extensions.desktop'}, {'id': 'ArcMenu_PanelExtensionSettings', 'name': 'Panel Extension Settings', 'icon': 'application-x-addon-symbolic'}, {'id': 'ArcMenu_Separator', 'name': 'Separator', 'icon': 'list-remove-symbolic'}, {'id': 'ArcMenu_PowerOptions', 'name': 'Power Options', 'icon': 'system-shutdown-symbolic'}, {'id': 'ArcMenu_ShowDesktop', 'name': 'Show Desktop', 'icon': 'computer-symbolic'}]
+enable-clock-widget-raven=false
+enable-unity-homescreen=false
+enable-weather-widget-raven=false
+hotkey-open-primary-monitor=false
+menu-background-color='rgba(48,48,49,0.98)'
+menu-layout='raven'
+multi-monitor=true
+override-menu-theme=true
+position-in-panel='Left'
+prefs-visible-page=0
+raven-search-display-style='List'
+recently-installed-apps=['com.desktop.ding.desktop']
+search-entry-border-radius=(true, 25)
+show-activities-button=false
+update-notifier-project-version=73

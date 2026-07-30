@@ -1,0 +1,15 @@
+[org/gnome/shell/extensions/vitals]
+alphabetize=false
+fixed-widths=false
+hide-icons=false
+hide-zeros=true
+icon-style=0
+memory-measurement=1
+position-in-panel=2
+show-battery=true
+show-fan=false
+show-gpu=false
+show-memory=true
+show-storage=false
+show-system=true
+show-voltage=false

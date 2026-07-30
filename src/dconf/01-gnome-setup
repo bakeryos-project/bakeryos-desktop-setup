@@ -1,0 +1,14 @@
+[org/gnome/shell]
+enabled-extensions=['bakeryos@bakeryos.smtdfc.space', 'blur-my-shell@aunetx', 'dash-to-panel@jderose9.github.com', 'tilingshell@ferrarodomenico.com', 'gtk4-ding@smedius.gitlab.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'arcmenu@arcmenu.com', 'clipboard-history@alexsaveau.dev', 'Vitals@CoreCoding.com']
+
+[org/gnome/shell/keybindings]
+focus-active-notification=@as []
+toggle-message-tray=['<Super>n']
+
+
+[org/gnome/desktop/wm/preferences]
+button-layout='appmenu:minimize,maximize,close'
+
+
+
+
