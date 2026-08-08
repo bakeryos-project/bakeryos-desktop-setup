@@ -97,6 +97,15 @@ def _extract_extension_zip_file(extension_id: str) -> None:
         zip_ref.extractall(target_ext_dir)
 
 
+    for root, dirs, files in os.walk(target_ext_dir):
+        for file in files:
+            if file.endswith(".js") or file.endswith(".sh") or "app" in root:
+                file_path = os.path.join(root, file)
+                try:
+                    os.chmod(file_path, 0o755)
+                except Exception as e:
+                    print(f"Error: {e}")
+
 def setup_gnome_extensions() -> None:
     for metadata in gnome_extensions:
         id = metadata.get("id")
