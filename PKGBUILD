@@ -1,5 +1,5 @@
 pkgname=bakeryos-desktop-setup
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Comprehensive desktop environment configuration package designed to provision a customized, highly productive, and visually polished user workspace with pre-configured settings, themes, and essential utilities."
 arch=('any')
@@ -24,4 +24,3 @@ package() {
 
     install -Dm644 "${startdir}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
-
