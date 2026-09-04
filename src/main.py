@@ -1,9 +1,9 @@
-from pathlib import Path
-import zipfile
 import json
-import urllib.request
-import urllib.parse
 import os
+import urllib.parse
+import urllib.request
+import zipfile
+from pathlib import Path
 
 script_dir = Path(__file__).resolve().parent
 project_dir = script_dir.parent
@@ -23,22 +23,10 @@ gnome_extensions: list[dict[str, str]] = [
         "id": "tilingshell@ferrarodomenico.com",
         "version": "76",
     },
-    {
-        "id": "arcmenu@arcmenu.com",
-        "version": "71"
-    },
-    {
-        "id": "gtk4-ding@smedius.gitlab.com",
-        "version": "139"
-    },
-    {
-        "id": "clipboard-history@alexsaveau.dev",
-        "version": "48"
-    },
-    {
-        "id": "Vitals@CoreCoding.com",
-        "version": "80"
-    }
+    {"id": "arcmenu@arcmenu.com", "version": "71"},
+    {"id": "gtk4-ding@smedius.gitlab.com", "version": "139"},
+    {"id": "clipboard-history@alexsaveau.dev", "version": "48"},
+    {"id": "Vitals@CoreCoding.com", "version": "80"},
 ]
 
 os.makedirs(build_dir, exist_ok=True)
@@ -55,8 +43,7 @@ def _check_extension_exists(extension_id: str) -> bool:
             data = json.loads(response.read().decode())
 
         plugins = data.get("plugins", [])
-        matched = next(
-            (p for p in plugins if p.get("uuid") == extension_id), None)
+        matched = next((p for p in plugins if p.get("uuid") == extension_id), None)
 
         if matched:
             return True
@@ -71,7 +58,7 @@ def _download_extension(extension_id: str, version: str) -> tuple[bool, Path | N
     print(f"Resolving extension: {extension_id} version {version}")
 
     try:
-        full_url = f"https://extensions.gnome.org/extension-data/{extension_id.replace("@", "")}.v{version}.shell-extension.zip"
+        full_url = f"https://extensions.gnome.org/extension-data/{extension_id.replace('@', '')}.v{version}.shell-extension.zip"
         target_zip = download_dir / f"{extension_id}.zip"
 
         print(f"Downloading from: {full_url}")
@@ -93,9 +80,8 @@ def _extract_extension_zip_file(extension_id: str) -> None:
     target_ext_dir = extract_dir / extension_id
     target_ext_dir.mkdir(parents=True, exist_ok=True)
 
-    with zipfile.ZipFile(target_zip, 'r') as zip_ref:
+    with zipfile.ZipFile(target_zip, "r") as zip_ref:
         zip_ref.extractall(target_ext_dir)
-
 
     for root, dirs, files in os.walk(target_ext_dir):
         for file in files:
@@ -105,6 +91,7 @@ def _extract_extension_zip_file(extension_id: str) -> None:
                     os.chmod(file_path, 0o755)
                 except Exception as e:
                     print(f"Error: {e}")
+
 
 def setup_gnome_extensions() -> None:
     for metadata in gnome_extensions:
