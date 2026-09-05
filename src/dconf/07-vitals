@@ -3,6 +3,7 @@ alphabetize=false
 fixed-widths=false
 hide-icons=false
 hide-zeros=true
+hot-sensors=['_memory_usage_', '__network-rx_max__', '_processor_usage_']
 icon-style=0
 memory-measurement=1
 position-in-panel=2

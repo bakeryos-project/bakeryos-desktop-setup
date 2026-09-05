@@ -1,0 +1,8 @@
+[/org/gnome/Console]
+audible-bell=false
+custom-font='JetBrainsMono Nerd Font Mono 10'
+font-scale=1.1000000000000001
+last-window-maximised=false
+last-window-size=(1452, 793)
+theme='night'
+use-system-font=false
