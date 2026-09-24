@@ -13,11 +13,11 @@ extract_dir = build_dir / "extensions"
 gnome_extensions: list[dict[str, str]] = [
     {
         "id": "dash-to-panel@jderose9.github.com",
-        "version": "73",
+        "version": "74",
     },
     {
         "id": "blur-my-shell@aunetx",
-        "version": "71",
+        "version": "72",
     },
     {
         "id": "tilingshell@ferrarodomenico.com",
@@ -43,7 +43,8 @@ def _check_extension_exists(extension_id: str) -> bool:
             data = json.loads(response.read().decode())
 
         plugins = data.get("plugins", [])
-        matched = next((p for p in plugins if p.get("uuid") == extension_id), None)
+        matched = next(
+            (p for p in plugins if p.get("uuid") == extension_id), None)
 
         if matched:
             return True
