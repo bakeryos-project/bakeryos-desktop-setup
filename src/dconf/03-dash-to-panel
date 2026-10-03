@@ -22,3 +22,4 @@ trans-use-custom-gradient=false
 trans-use-custom-opacity=true
 trans-use-dynamic-opacity=true
 window-preview-title-position='TOP'
+hide-overview-on-startup=true
