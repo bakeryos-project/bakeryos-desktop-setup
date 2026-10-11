@@ -9,7 +9,7 @@ source=()
 sha256sums=()
 options=(!debug !strip)
 depends=('pacman')
-makedepends=('python')
+makedepends=('python' 'python-requests' 'unzip')
 
 build(){
     cd $srcdir
