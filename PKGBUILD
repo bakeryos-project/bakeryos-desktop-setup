@@ -1,5 +1,5 @@
 pkgname=bakeryos-desktop-setup
-pkgver=1.1.6
+pkgver=1.1.7
 pkgrel=1
 pkgdesc="Comprehensive desktop environment configuration package designed to provision a customized, highly productive, and visually polished user workspace with pre-configured settings, themes, and essential utilities."
 arch=('any')
@@ -26,7 +26,7 @@ backup=(
 
 build(){
     cd $srcdir
-    python ./gnome.py "$startdir/extensions"
+    python ./gnome.py "$startdir/extensions" --shell-version 51
 }
 
 package() {
