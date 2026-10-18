@@ -3,3 +3,4 @@
 /pkg
 build
 extensions
+__pycache__

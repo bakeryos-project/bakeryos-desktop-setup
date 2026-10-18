@@ -1,0 +1,79 @@
+name: Update GNOME Extension Versions
+
+on:
+  schedule:
+    # Run every day at 06:00 UTC.
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      shell_version:
+        description: 'GNOME Shell major version to target'
+        required: false
+        default: '51'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run version check script
+        id: check
+        run: |
+          cd ${{ github.workspace }}
+          SHELL_VER="${{ github.event.inputs.shell_version || 51 }}"
+          python src/update_versions.py --shell-version "$SHELL_VER"
+
+      - name: Create or update pull request
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          cd ${{ github.workspace }}
+
+          BASE_BRANCH="${{ github.ref_name || github.event.repository.default_branch }}"
+          BRANCH="update-gnome-extensions-${{ github.run_id }}"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
+
+          git fetch origin
+          git checkout -b "$BRANCH" "origin/$BASE_BRANCH"
+
+          git add src/extensions.json
+          git commit -m "chore: update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}"
+          git push -u origin "$BRANCH"
+
+          # If a PR from this branch already exists, just refresh it; otherwise open a new one.
+          EXISTING_PR=$(gh pr list --head "$BRANCH" --base "$BASE_BRANCH" --state open --json number -q '.[0].number' 2>/dev/null || true)
+
+          if [ -n "$EXISTING_PR" ]; then
+            echo "PR #$EXISTING_PR already exists, updating description..."
+            gh pr edit "$EXISTING_PR" \
+              --title "chore: update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}" \
+              --body "Automated update from \`update-extensions\` workflow (run ${{ github.run_id }})."
+          else
+            gh pr create \
+              --base "$BASE_BRANCH" \
+              --head "$BRANCH" \
+              --title "chore: update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}" \
+              --body "Automated update from \`update-extensions\` workflow (run ${{ github.run_id }}). Please review the new pinned versions in \`src/extensions.json\` before merging."
+          fi

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "dash-to-panel@jderose9.github.com",
+    "version": "73"
+  },
+  {
+    "name": "blur-my-shell@aunetx",
+    "version": "75"
+  },
+  {
+    "name": "tilingshell@ferrarodomenico.com",
+    "version": "77"
+  },
+  {
+    "name": "arcmenu@arcmenu.com",
+    "version": "74"
+  },
+  {
+    "name": "gtk4-ding@smedius.gitlab.com",
+    "version": "145"
+  },
+  {
+    "name": "clipboard-history@alexsaveau.dev",
+    "version": "52"
+  },
+  {
+    "name": "Vitals@CoreCoding.com",
+    "version": "86"
+  }
+]
