@@ -1,10 +1,11 @@
 [org/gnome/shell/extensions/blur-my-shell]
-pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000000'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>, 'unscaled_radius': <0>}>}>]>}, 'pipeline_10595163571471': {'name': <'Panel'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_60785253021963'>, 'params': <{'unscaled_radius': <0>}>}>]>}, 'pipeline_74681545620633': {'name': <'Overview'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_01826914910976'>, 'params': <{'unscaled_radius': <30>}>}>]>}, 'pipeline_09848160488253': {'name': <'Lockscreen'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_34918799561077'>, 'params': <{'unscaled_radius': <0>}>}>]>}}
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_000000000000'>, 'params': <{'unscaled_radius': <0>, 'brightness': <0.73999999999999999>}>}>]>}, 'pipeline_10595163571471': {'name': <'Panel'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_60785253021963'>, 'params': <{'unscaled_radius': <0>, 'brightness': <1>}>}>]>}, 'pipeline_74681545620633': {'name': <'Overview'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_01826914910976'>, 'params': <{'unscaled_radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_09848160488253': {'name': <'Lockscreen'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_34918799561077'>, 'params': <{'unscaled_radius': <74>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_fe540c35-c9eb-403d-8e06-623db645e362': {'name': <'Popup'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_aa9ecd98-4e19-4139-bdd5-51c42f1035b4'>, 'params': <{'unscaled_radius': <89>, 'brightness': <1>}>}>]>}, 'pipeline_2acb2433-cba4-487d-a56f-da6412a42343': {'name': <'Screenshot'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_98fc43e0-17a3-4219-9160-e0aad6b9c2bb'>, 'params': <@a{sv} {}>}>]>}, 'pipeline_4de98385-c5f1-45ea-94fa-4c6b9a1e30cb': {'name': <'Alt+Tab'>, 'effects': <[<{'type': <'dual_kawase_blur'>, 'id': <'effect_ccb67138-eed8-4c9c-b1e1-ea9d95fb7f63'>, 'params': <{'unscaled_radius': <10>, 'brightness': <0.81999999999999995>}>}>]>}}
 rounded-blur-found=false
-settings-version=2
+settings-version=7
 
 [org/gnome/shell/extensions/blur-my-shell/appfolder]
 brightness=0.59999999999999998
+pipeline='pipeline_default'
 sigma=30
 
 [org/gnome/shell/extensions/blur-my-shell/applications]
@@ -12,9 +13,8 @@ blur=false
 pipeline='pipeline_default'
 
 [org/gnome/shell/extensions/blur-my-shell/coverflow-alt-tab]
-blur=false
-pipeline='pipeline_default'
-
+blur=true
+pipeline='pipeline_4de98385-c5f1-45ea-94fa-4c6b9a1e30cb'
 
 [org/gnome/shell/extensions/blur-my-shell/dash-to-dock]
 blur=true
@@ -26,7 +26,9 @@ static-blur=true
 style-dash-to-dock=0
 unblur-in-overview=false
 
+
 [org/gnome/shell/extensions/blur-my-shell/lockscreen]
+blur=false
 pipeline='pipeline_09848160488253'
 
 [org/gnome/shell/extensions/blur-my-shell/overview]
@@ -35,20 +37,30 @@ pipeline='pipeline_74681545620633'
 [org/gnome/shell/extensions/blur-my-shell/panel]
 brightness=0.59999999999999998
 corner-radius=0
+gradient-panel=false
 override-background=true
+override-background-dynamically=false
+override-background-dynamically-mode=1
 pipeline='pipeline_10595163571471'
 sigma=30
 static-blur=true
+style-panel=0
+unblur-in-overview=true
 
 
 [org/gnome/shell/extensions/blur-my-shell/screenshot]
-blur=false
-pipeline='pipeline_default'
+blur=true
+pipeline='pipeline_2acb2433-cba4-487d-a56f-da6412a42343'
 
 [org/gnome/shell/extensions/blur-my-shell/window-list]
 blur=false
 brightness=0.59999999999999998
+pipeline='pipeline_default'
 sigma=30
 
 [org/gnome/shell/extensions/blur-my-shell/popup]
 blur=false
+pipeline='pipeline_fe540c35-c9eb-403d-8e06-623db645e362'
+preserve-shell-theme=false
+static-blur=false
+style-popup=2

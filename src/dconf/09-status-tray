@@ -1,0 +1,8 @@
+[org/gnome/shell/extensions/status-tray]
+app-order=@as []
+disabled-apps=@as []
+icon-padding=8
+overflow-custom-icon='arrow-up-symbolic'
+overflow-enabled=true
+overflow-icon-style='custom'
+overflow-mode='menu'

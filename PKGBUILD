@@ -1,5 +1,5 @@
 pkgname=bakeryos-desktop-setup
-pkgver=1.1.8
+pkgver=1.1.9
 pkgrel=1
 pkgdesc="Comprehensive desktop environment configuration package designed to provision a customized, highly productive, and visually polished user workspace with pre-configured settings, themes, and essential utilities."
 arch=('any')
@@ -22,6 +22,7 @@ backup=(
     'etc/dconf/db/local.d/06-clipboard-history'
     'etc/dconf/db/local.d/07-vitals'
     'etc/dconf/db/local.d/08-console'
+    'etc/dconf/db/local.d/09-status-tray'
 )
 
 build(){
