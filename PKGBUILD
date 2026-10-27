@@ -1,5 +1,5 @@
 pkgname=bakeryos-desktop-setup
-pkgver=1.1.10
+pkgver=1.1.11
 pkgrel=1
 pkgdesc="Comprehensive desktop environment configuration package designed to provision a customized, highly productive, and visually polished user workspace with pre-configured settings, themes, and essential utilities."
 arch=('any')
