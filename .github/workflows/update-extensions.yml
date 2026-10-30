@@ -59,7 +59,7 @@ jobs:
           git checkout -b "$BRANCH" "origin/$BASE_BRANCH"
 
           git add src/extensions.json
-          git commit -m "chore: update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}"
+          git commit -m "feat: update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}"
           git push -u origin "$BRANCH"
 
           # If a PR from this branch already exists, just refresh it; otherwise open a new one.
@@ -68,12 +68,14 @@ jobs:
           if [ -n "$EXISTING_PR" ]; then
             echo "PR #$EXISTING_PR already exists, updating description..."
             gh pr edit "$EXISTING_PR" \
-              --title "chore: update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}" \
+              --reviewer smtdfc \
+              --title "Update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}" \
               --body "Automated update from \`update-extensions\` workflow (run ${{ github.run_id }})."
           else
             gh pr create \
               --base "$BASE_BRANCH" \
               --head "$BRANCH" \
-              --title "chore: update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}" \
-              --body "Automated update from \`update-extensions\` workflow (run ${{ github.run_id }}). Please review the new pinned versions in \`src/extensions.json\` before merging."
+              --title "Update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}" \
+              --body "Automated update from \`update-extensions\` workflow (run ${{ github.run_id }}). Please review the new pinned versions in \`src/extensions.json\` before merging." \
+              --add-reviewer smtdfc
           fi
