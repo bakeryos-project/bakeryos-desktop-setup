@@ -1,0 +1,36 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Release Please
+        uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+      # - name: Trigger Release Publish
+      #   if: ${{ steps.release.outputs.releases_created == 'true' }}
+      #   env:
+      #     GH_TOKEN: ${{ github.token }}
+      #   run: |
+      #     gh workflow run release-publish.yml \
+      #       --ref main \
+      #       -f tag="${{ steps.release.outputs.tag_name }}"
