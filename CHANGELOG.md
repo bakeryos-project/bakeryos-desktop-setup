@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.2.0...v1.2.1) (2026-10-31)
+
+
+### Bug Fixes
+
+* change uuid of BakeryOS GNOME extension ([5177d6f](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/5177d6f05c61f0f4d5b66ff9f8bafdd5def3798b))
+
 ## [1.2.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.1.11...v1.2.0) (2026-10-30)
 
 
