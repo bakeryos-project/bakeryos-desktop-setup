@@ -5,7 +5,7 @@
   },
   {
     "name": "blur-my-shell@aunetx",
-    "version": "76"
+    "version": "77"
   },
   {
     "name": "tilingshell@ferrarodomenico.com",
@@ -25,6 +25,6 @@
   },
   {
     "name": "status-tray@keithvassallo.com",
-    "version": "33"
+    "version": "34"
   }
 ]
