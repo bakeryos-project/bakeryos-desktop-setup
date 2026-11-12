@@ -76,6 +76,5 @@ jobs:
               --base "$BASE_BRANCH" \
               --head "$BRANCH" \
               --title "Update GNOME extension versions for shell ${{ github.event.inputs.shell_version || 51 }}" \
-              --body "Automated update from \`update-extensions\` workflow (run ${{ github.run_id }}). Please review the new pinned versions in \`src/extensions.json\` before merging." \
-              --add-reviewer smtdfc
+              --body "Automated update from \`update-extensions\` workflow (run ${{ github.run_id }}). Please review the new pinned versions in \`src/extensions.json\` before merging." 
           fi
