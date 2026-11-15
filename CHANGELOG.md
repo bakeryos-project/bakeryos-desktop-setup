@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.4.0...v1.4.1) (2026-11-15)
+
+
+### Bug Fixes
+
+* remove blur my shell ([431dffc](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/431dffc9a62cba280aa6d3b454bdd2d7b585b911))
+
 ## [1.4.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.3.0...v1.4.0) (2026-11-15)
 
 
