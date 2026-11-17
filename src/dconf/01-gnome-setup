@@ -8,3 +8,27 @@ toggle-message-tray=['<Super>n']
 
 [org/gnome/desktop/wm/preferences]
 button-layout='appmenu:minimize,maximize,close'
+
+[org/gnome/desktop/interface]
+accent-color='orange'
+clock-format='24h'
+clock-show-date=true
+clock-show-seconds=false
+clock-show-weekday=false
+color-scheme='prefer-dark'
+cursor-theme='Bibata-Material-Slate-Light'
+enable-animations=true
+enable-hot-corners=false
+font-antialiasing='rgba'
+font-name='Ubuntu 11'
+gtk-theme='adw-gtk3'
+icon-theme='Papirus'
+monospace-font-name='JetBrainsMono Nerd Font Light 11'
+show-battery-percentage=false
+toolkit-accessibility=false
+
+[org/gnome/desktop/calendar]
+show-weekdate=false
+
+[org/gnome/desktop/datetime]
+automatic-timezone=false
