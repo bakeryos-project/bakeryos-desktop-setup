@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.4.1...v1.5.0) (2026-11-18)
+
+
+### Features
+
+* set default GNOME wallpaper ([3f1d6f6](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/3f1d6f64850dc94f0aca976ae4ff1a0850ce65a8))
+* update gnome config ([c0f7f53](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/c0f7f5302ff8e3662e1ec43147d878788a4828c2))
+
 ## [1.4.1](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.4.0...v1.4.1) (2026-11-15)
 
 
