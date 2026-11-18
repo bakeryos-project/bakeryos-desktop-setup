@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.7.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.6.0...v1.7.0) (2026-11-18)
+
+
+### Features
+
+* enable `just perfection` extension ([a0d495d](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/a0d495dea01602c1c4ed874f134bb1dcec691eb3))
+* update GNOME extension versions for shell 51 ([1fd6b92](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/1fd6b92562d28da4a47b9ec5a00c6f4240f2178d))
+
+
+### Bug Fixes
+
+* remove unused key in arcmenu config ([dbec3fa](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/dbec3fad1251649b60800af4be4d4e48b960cd2e))
+* remove vitals config ([15442ed](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/15442ede47fb85ee5746176bd80d18cad70da4ce))
+
 ## [1.6.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.5.0...v1.6.0) (2026-11-18)
 
 
