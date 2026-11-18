@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.7.0...v1.7.1) (2026-11-18)
+
+
+### Bug Fixes
+
+* honour pinned extension versions ([ff87950](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/ff879501ab867da4df9b697076709e677d0556b0))
+
 ## [1.7.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.6.0...v1.7.0) (2026-11-18)
 
 
