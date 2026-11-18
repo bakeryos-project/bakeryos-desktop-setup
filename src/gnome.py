@@ -175,11 +175,28 @@ def main():
             f"latest compatible: {latest_version}"
         )
 
+        # extensions.json is the source of truth: a downloaded upstream release
+        # can change how user state is stored, so never drift without a bump.
+        version = latest_version
+        if pinned_version:
+            try:
+                version = int(pinned_version)
+            except (TypeError, ValueError):
+                print(f"Warning: invalid pin '{pinned_version}', using {latest_version}")
+
         try:
-            target_zip = download_extension(extension_id, latest_version, download_dir)
+            target_zip = download_extension(extension_id, version, download_dir)
         except Exception as e:
-            print(f"Error downloading {extension_id}: {e}")
-            continue
+            if version == latest_version:
+                print(f"Error downloading {extension_id}: {e}")
+                continue
+            print(f"Error downloading pinned {extension_id} v{version}: {e}")
+            print(f"Falling back to latest compatible version {latest_version}")
+            try:
+                target_zip = download_extension(extension_id, latest_version, download_dir)
+            except Exception as fallback_error:
+                print(f"Error downloading {extension_id}: {fallback_error}")
+                continue
 
         try:
             extract_and_chmod(target_zip, extract_dir, extension_id)
