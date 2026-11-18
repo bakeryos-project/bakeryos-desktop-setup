@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.7.1...v1.8.0) (2026-11-18)
+
+
+### Features
+
+* sync dash-to-panel settings ([b61808a](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/b61808a097f06202a2f41e178cf8bbf624d3b084))
+
 ## [1.7.1](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.7.0...v1.7.1) (2026-11-18)
 
 
