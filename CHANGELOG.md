@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.5.0...v1.6.0) (2026-11-18)
+
+
+### Features
+
+* add extension `just-perfection-desktop@just-perfection` ([46534be](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/46534bea036a264b0de4154f1faffb10ad46288d))
+* chane panel-element-positions in dash to panel config ([7aa574b](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/7aa574bdc6b77a2650373873ffc2f8342aff934d))
+
 ## [1.5.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.4.1...v1.5.0) (2026-11-18)
 
 
