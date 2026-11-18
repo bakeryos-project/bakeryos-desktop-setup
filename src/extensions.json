@@ -13,7 +13,7 @@
   },
   {
     "name": "gtk4-ding@smedius.gitlab.com",
-    "version": "147"
+    "version": "148"
   },
   {
     "name": "clipboard-history@alexsaveau.dev",
@@ -24,7 +24,7 @@
     "version": "34"
   },
   {
-    "name":"just-perfection-desktop@just-perfection",
-    "version":"37"
+    "name": "just-perfection-desktop@just-perfection",
+    "version": "37"
   }
 ]
