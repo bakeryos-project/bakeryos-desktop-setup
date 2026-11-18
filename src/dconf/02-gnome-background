@@ -1,0 +1,10 @@
+[org/gnome/desktop/background]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/bakeryos-wallpapers/wallpaper_004.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/bakeryos-wallpapers/wallpaper_004.jpg'
+
+[org/gnome/desktop/screensaver]
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///usr/share/backgrounds/bakeryos-wallpapers/wallpaper_004.jpg'
