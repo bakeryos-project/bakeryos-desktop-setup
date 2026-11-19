@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.8.0...v1.9.0) (2026-11-19)
+
+
+### Features
+
+* update GNOME extension versions for shell 51 ([d044cbd](https://github.com/bakeryos-project/bakeryos-desktop-setup/commit/d044cbd97018ab9d3fd5e3a20ee911f758017aec))
+
 ## [1.8.0](https://github.com/bakeryos-project/bakeryos-desktop-setup/compare/v1.7.1...v1.8.0) (2026-11-18)
 
 
