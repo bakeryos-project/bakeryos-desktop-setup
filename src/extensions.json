@@ -13,11 +13,11 @@
   },
   {
     "name": "gtk4-ding@smedius.gitlab.com",
-    "version": "148"
+    "version": "149"
   },
   {
     "name": "clipboard-history@alexsaveau.dev",
-    "version": "54"
+    "version": "55"
   },
   {
     "name": "status-tray@keithvassallo.com",
